@@ -1,0 +1,101 @@
+Mutation check (tests/mutate.py) against 98 unit tests
+
+killed   M01 hydraulics.py: if re < E.RE_LAMINAR_MAX:
+killed   M02 hydraulics.py: return 64.0 / re
+killed   M03 hydraulics.py: 5.74 / re ** 0.9
+killed   M04 hydraulics.py: rel_rough / 3.7
+killed   M05 hydraulics.py: return flow / 60000.0
+killed   M06 hydraulics.py: * (E.T_OP_K / E.T_STD_K)
+killed   M07 hydraulics.py: / (E.R_GAS * E.T_OP_K)
+killed   M08 hydraulics.py: (n_elbows * E.ELBOW_K + k_fit) * dyn
+killed   M09 hydraulics.py: (rho - E.RHO_AIR_AMBIENT) * E.G * dz_flow / 1000.0
+killed   M10 hydraulics.py: return header_p_kpa_g - tool_p_kpa_g
+killed   M11 hydraulics.py: return tool_p_kpa_g - header_p_kpa_g
+killed   M12 hydraulics.py: v_ok = loss["velocity"] <= sysd["v_max"]
+killed   M13 hydraulics.py: valid = abs(loss["dp_total_kpa"]) < E.GAS_DP_FRACTION_MAX * abs_pressu
+killed   M14 hydraulics.py: elif vel_only is not None and s["label"] == vel_only["label"]:
+killed   M15 hydraulics.py: dp_static = (rho - E.RHO_AIR_AMBIENT) * E.G
+killed   M16 hydraulics.py: (n_elbows * E.ELBOW_K + k_fit) * dyn
+killed   M17 hydraulics.py: return supply_header_p - supply_dp - tool_dp
+killed   M18 hydraulics.py: ok = E.breaker_ok(size["amps"], flow)
+killed   M19 hydraulics.py: governed = "pressure" if not below["pressure_ok"] else "gas validity"
+killed   M20 engineering.py: ELBOW_K = 0.3
+killed   M21 engineering.py: 0.3048 / 60.0
+killed   M22 engineering.py: "id": (od - 2 * wall) / 1000.0
+killed   M23 engineering.py: RHO_AIR_AMBIENT = P_ATM_KPA * 1000.0 * M_AIR / (R_GAS * T_OP_K)
+killed   M24 engineering.py: "liquid": TEE_BRANCH_K + BALL_VALVE_K
+killed   M25 engineering.py: (T_OP_K - 280.0) / 20.0
+killed   M26 engineering.py: "id": (od - 2 * wall) * INCH_M
+killed   M27 engineering.py: "ss_ep_tube": 0.0008e-3
+killed   M28 engineering.py: return kva * 1000.0 / (math.sqrt(3.0) * V_LL)
+killed   M29 engineering.py: return amps >= CONTINUOUS_LOAD_FACTOR * kva_to_amps(kva) - 1e-9
+killed   M30 engineering.py: return amps / CONTINUOUS_LOAD_FACTOR * math.sqrt(3.0) * V_LL / 1000.0
+killed   M31 geometry.py: max(0.0, lo2[a] - hi1[a], lo1[a] - hi2[a])
+killed   M32 geometry.py: return box_gap(a.lo, a.hi, b.lo, b.hi) - a.r - b.r
+killed   M33 geometry.py: "type": "hard" if g < -EPS else "clearance"
+killed   M34 geometry.py: if b.kind == "route" and b.owner == a.owner:
+equiv.   M35 geometry.py: if h >= n_exist and h - n_exist <= idx:
+killed   M36 geometry.py: if h >= n_exist and h - n_exist <= idx:
+killed   M37 lattice.py: (BEND_COST if nd != d else 0)
+killed   M38 lattice.py: if m == goal and nd != UP:
+killed   M39 lattice.py: g2 + STEP_COST * self.manhattan(m, goal)
+killed   M40 lattice.py: ok = ((f >= r + clearance - EPS)
+killed   M41 lattice.py: (f > EPS) &
+killed   M42 lattice.py: if full[cur] >= need:
+killed   M43 lattice.py: for depth in range(PEN_DEPTH + 1):
+killed   M44 lattice.py: if _unit(d1) != _unit(d2):
+killed   M45 assign.py: A[hrow[_header_of(site, newpocs, p)], n] = d["flow"] * E.COINCIDENCE_F
+killed   M46 assign.py: A[hrow[h], nx_ + n] = -idx.headers[h]["upgrade_step"]
+killed   M47 assign.py: return c + (rates["new_poc_each"] if "@" in p else 0.0)
+killed   M48 assign.py: A[prow[position(p)], n] = 1.0
+killed   M49 assign.py: while rem[h] < load:
+killed   M50 assign.py: and p["id"] not in used and p["rated_flow"] >= d["flow"]]
+killed   M51 assign.py: h["capacity"] * (1.0 - reserve) - loads[h["id"]]
+killed   M52 assign.py: if pairing:
+killed   M53 assign.py: A[row0 + k, n] = -1.0
+killed   M54 assign.py: lb[row0 + k] = ub[row0 + k] = 0.0
+killed   M55 assign.py: opts = [o for o in opts if corridor(site, newpocs, o[1]) == want]
+killed   M56 capacity.py: steps = math.ceil(shortfall / step - 1e-9) if shortfall > 0 else 0
+killed   M57 capacity.py: usable = h["capacity"] * (1.0 - reserve)
+killed   M58 model.py: if hk["status"] not in ("released", "installed", "tested"):
+killed   M59 model.py: return E.FAB_FLOOR_Z - poc_z
+killed   M60 model.py: if E.size_index(system, sel["size"]["label"]) <= E.size_index(system, 
+killed   M61 model.py: if system != E.PCW_PAIR[1]:
+killed   M62 schema.sql: WHEN k.status IN ('installed', 'tested', 'released')
+killed   M63 planner.py: supply[d["tool"]] = (hdr["pressure_kpa_g"], ev["dp_total_kpa"], hdr["c
+killed   M64 review.py: if d["flow"] > poc["rated_flow"] + EPS:
+killed   M65 review.py: start_ok = _close(pts[0], (poc["x"], poc["y"], poc["z"]))
+killed   M66 review.py: + upgrades.get(h, 0) * hdr["upgrade_step"]
+killed   M67 review.py: if len(users) > 1:
+killed   M68 review.py: if poc["system"] != hk["system"]:
+killed   M69 review.py: key=lambda n: (proposal[n]["system"] == E.PCW_PAIR[1], n)
+killed   M70 review.py: supply[hk["tool"]] = (idx.headers[poc["header"]]["pressure_kpa_g"], ev
+killed   M71 review.py: if s and r and s[0] != r[0]:
+killed   M72 review.py: tool_p = float("inf")
+killed   M73 review.py: (px, q[1], q[2]), (px, py, q[2]),
+killed   M74 review.py: wrong = d["flow"] * 1000.0 / 60.0
+killed   M75 review.py: wrong = d["flow"] * 60.0 / 1000.0
+killed   M76 review.py: dz_flow(hk["system"], idx.pocs[hk["poc"]]["z"]), hp)["dp_total_kpa"] >
+killed   M77 review.py: partner["points"] = _redirect_end(partner["points"], ds["px"], ds["py"
+killed   M78 review.py: if s == hk["system"] and t != hk["tool"]
+killed   M79 review.py: or (i["hookup"] in partners and i["code"]
+killed   M80 schedule.py: if all(u[s] < crews[res] for s in range(start, need)):
+killed   M81 schedule.py: start = max([done[p] for p in t["preds"]], default=0)
+killed   M82 schedule.py: max(1, math.ceil(days * 2 - 1e-9))
+killed   M83 schedule.py: "preds": [f"HU-{hk['id']}", f"MS-{hk['tool']}"]
+killed   M84 schedule.py: "preds": [f"UO-{tool}"]
+killed   M85 costing.py: return r["a"] + r["b"] * s["od"] * 1000.0
+killed   M86 costing.py: elbows = hk["bends"] if kind != "power" else 0
+killed   M87 ifc_io.py: "x1": r10(x + s.Directrix.Points[-1].Coordinates[0])
+killed   M88 ifc_io.py: w.placement((cx, cy, 0.0), fab_pl)
+killed   M89 ifc_io.py: w.connect(hp, pin, f"hdr-poc/{p['id']}")
+killed   M90 ifc_io.py: VIEW_DEFINITION = "ViewDefinition [ReferenceView_V1.2]"
+killed   M91 planner.py: return b.kind == "header" and a.eid.endswith("#0") and poc_header.get(
+killed   M92 planner.py: lat.reserved[n] = True
+killed   M93 numfmt.py: v = float(f"{x:.10g}")
+
+Equivalent mutants:
+  geometry.py: if h >= n_exist and h - n_exist <= idx: -> if h >= n_exist and h - n_exist < idx:
+    -> the only extra pair it admits is a run tested against itself, which the same-owner rule skips
+
+92/93 mutants killed (1 documented equivalent, 0 escaped)

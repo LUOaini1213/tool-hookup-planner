@@ -1,0 +1,33 @@
+{
+  "all_checks_pass": true,
+  "astar_clashes": 0,
+  "bends": 199,
+  "exhaust_below_1000_fpm": 2,
+  "exhaust_dp_range_kpa": [
+    0.03402737723,
+    0.1529057992
+  ],
+  "exhaust_hookups": 14,
+  "exhaust_static_abs_max_kpa": 0.0005873489046,
+  "failures": [],
+  "hookups": 52,
+  "manhattan_lower_bound_m": 620.4,
+  "naive_clashes": 402,
+  "naive_clashes_by_kind": {
+    "header": 12,
+    "route": 390
+  },
+  "naive_hookups_with_clash": 44,
+  "negative_dp_exhaust_hookups": 0,
+  "pcw_tools_split_across_corridors": 0,
+  "pcwr_min_margin_kpa": 23.71354556,
+  "reassigned": [],
+  "requirements": 52,
+  "routed_length_m": 628.8,
+  "routed_over_lower_bound": 1.013539652,
+  "sizes_governed_by": {
+    "pressure": 4,
+    "rating": 8,
+    "velocity": 40
+  }
+}

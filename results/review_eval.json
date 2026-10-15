@@ -1,0 +1,1515 @@
+{
+  "clean_issues": 0,
+  "open_faults": {
+    "gas_dp_over_10pct": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "MODEL_INVALID",
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-N2"
+          ],
+          "target": "HN-N08-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "MODEL_INVALID",
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-N2"
+          ],
+          "target": "HN-N07-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 2,
+      "codes_on_target": {
+        "MODEL_INVALID": 2,
+        "UNDERSIZED_PRESSURE": 2,
+        "UNDERSIZED_VELOCITY": 2
+      },
+      "explained_elsewhere": 0,
+      "injected": 2,
+      "not_applicable_targets": 50,
+      "unexplained_elsewhere": 0
+    },
+    "route_to_wrong_tool": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 10,
+          "faulted": [
+            "HN-N06-PCWR"
+          ],
+          "target": "HN-N06-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N03-GEX"
+          ],
+          "target": "HN-N03-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "UNDERSIZED_PRESSURE"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-UPW"
+          ],
+          "target": "HN-N02-UPW",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 2,
+          "faulted": [
+            "HN-N04-SEX"
+          ],
+          "target": "HN-N04-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 13,
+          "faulted": [
+            "HN-N06-SEX"
+          ],
+          "target": "HN-N06-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "UNDERSIZED_PRESSURE"
+          ],
+          "explained_elsewhere": 1,
+          "faulted": [
+            "HN-N04-PCWS"
+          ],
+          "target": "HN-N04-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-N2"
+          ],
+          "target": "HN-N04-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-GEX"
+          ],
+          "target": "HN-N04-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "CLASH_HARD": 8,
+        "ROUTE_DISCONNECTED": 8,
+        "UNDERSIZED_PRESSURE": 2
+      },
+      "explained_elsewhere": 26,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    },
+    "supply_return_swapped": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-PCWS",
+            "HN-N05-PCWR"
+          ],
+          "target": "HN-N05-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWS",
+            "HN-N02-PCWR"
+          ],
+          "target": "HN-N02-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-PCWS",
+            "HN-N07-PCWR"
+          ],
+          "target": "HN-N07-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-PCWS",
+            "HN-N08-PCWR"
+          ],
+          "target": "HN-N08-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-PCWS",
+            "HN-N06-PCWR"
+          ],
+          "target": "HN-N06-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-PCWS",
+            "HN-N04-PCWR"
+          ],
+          "target": "HN-N04-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 6,
+      "codes_on_target": {
+        "CLASH_HARD": 6,
+        "ROUTE_DISCONNECTED": 6
+      },
+      "explained_elsewhere": 0,
+      "injected": 6,
+      "not_applicable_targets": 46,
+      "unexplained_elsewhere": 0
+    },
+    "unit_lpm_read_as_m3h": {
+      "cases": [
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-UPW"
+          ],
+          "target": "HN-N06-UPW",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-UPW"
+          ],
+          "target": "HN-N02-UPW",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-PCWS"
+          ],
+          "target": "HN-N06-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-PCWR"
+          ],
+          "target": "HN-N04-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-PCWR"
+          ],
+          "target": "HN-N07-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-PCWS"
+          ],
+          "target": "HN-N07-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWS"
+          ],
+          "target": "HN-N02-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": false,
+          "codes_on_target": [],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWR"
+          ],
+          "target": "HN-N02-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 0,
+      "codes_on_target": {},
+      "explained_elsewhere": 0,
+      "injected": 8,
+      "not_applicable_targets": 20,
+      "unexplained_elsewhere": 0
+    },
+    "unit_m3h_read_as_lpm": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-SEX"
+          ],
+          "target": "HN-N06-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-CDA"
+          ],
+          "target": "HN-N06-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-SEX"
+          ],
+          "target": "HN-N02-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-N2"
+          ],
+          "target": "HN-N06-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N03-GEX"
+          ],
+          "target": "HN-N03-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N03-CDA"
+          ],
+          "target": "HN-N03-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "MODEL_INVALID",
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-N2"
+          ],
+          "target": "HN-N07-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-SEX"
+          ],
+          "target": "HN-N04-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "MODEL_INVALID": 1,
+        "UNDERSIZED_PRESSURE": 5,
+        "UNDERSIZED_VELOCITY": 8
+      },
+      "explained_elsewhere": 0,
+      "injected": 8,
+      "not_applicable_targets": 11,
+      "unexplained_elsewhere": 0
+    }
+  },
+  "rule_faults": {
+    "clash": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-CDA"
+          ],
+          "target": "HN-N04-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "UNDERSIZED_PRESSURE"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 11,
+          "faulted": [
+            "HN-N04-PCWS"
+          ],
+          "target": "HN-N04-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 5,
+          "faulted": [
+            "HN-N06-PCWS"
+          ],
+          "target": "HN-N06-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 3,
+          "faulted": [
+            "HN-N07-AEX"
+          ],
+          "target": "HN-N07-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N01-CDA"
+          ],
+          "target": "HN-N01-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-GEX"
+          ],
+          "target": "HN-N08-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 2,
+          "faulted": [
+            "HN-N06-UPW"
+          ],
+          "target": "HN-N06-UPW",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-AEX"
+          ],
+          "target": "HN-N05-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "CLASH_HARD": 8,
+        "UNDERSIZED_PRESSURE": 1
+      },
+      "expected_codes": [
+        "CLASH_HARD"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 21,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    },
+    "disconnected_route": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-GEX"
+          ],
+          "target": "HN-N08-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-GEX"
+          ],
+          "target": "HN-N05-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-PCWR"
+          ],
+          "target": "HN-N05-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PWR"
+          ],
+          "target": "HN-N02-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N01-N2"
+          ],
+          "target": "HN-N01-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-N2"
+          ],
+          "target": "HN-N02-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-N2"
+          ],
+          "target": "HN-N08-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-PWR"
+          ],
+          "target": "HN-N04-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "ROUTE_DISCONNECTED": 8
+      },
+      "expected_codes": [
+        "ROUTE_DISCONNECTED"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 0,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    },
+    "duplicate_poc": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "HEADER_OVER_CAPACITY",
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 3,
+          "faulted": [
+            "HN-N01-PWR",
+            "HN-N08-PWR"
+          ],
+          "target": "HN-N01-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-CDA",
+            "HN-N07-CDA"
+          ],
+          "target": "HN-N06-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-CDA",
+            "HN-N07-CDA"
+          ],
+          "target": "HN-N04-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-PCWR",
+            "HN-N02-PCWR"
+          ],
+          "target": "HN-N08-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWS",
+            "HN-N08-PCWS"
+          ],
+          "target": "HN-N02-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "HEADER_OVER_CAPACITY",
+            "POC_IN_USE",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 3,
+          "faulted": [
+            "HN-N03-PWR",
+            "HN-N07-PWR"
+          ],
+          "target": "HN-N03-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N01-GEX",
+            "HN-N04-GEX"
+          ],
+          "target": "HN-N01-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_IN_USE",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-N2",
+            "HN-N05-N2"
+          ],
+          "target": "HN-N04-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "CLASH_HARD": 4,
+        "HEADER_OVER_CAPACITY": 2,
+        "POC_IN_USE": 8,
+        "POC_OVER_RATING": 1,
+        "ROUTE_DISCONNECTED": 8
+      },
+      "expected_codes": [
+        "POC_IN_USE"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 6,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    },
+    "header_over_capacity": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "HEADER_OVER_CAPACITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-AEX",
+            "HN-N07-AEX"
+          ],
+          "target": "HN-N02-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "HEADER_OVER_CAPACITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-AEX",
+            "HN-N07-AEX"
+          ],
+          "target": "HN-N07-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 2,
+      "codes_on_target": {
+        "HEADER_OVER_CAPACITY": 2
+      },
+      "expected_codes": [
+        "HEADER_OVER_CAPACITY"
+      ],
+      "expected_fired": 2,
+      "explained_elsewhere": 0,
+      "injected": 2,
+      "not_applicable_targets": 50,
+      "unexplained_elsewhere": 0
+    },
+    "pcw_split_corridor": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-PCWR",
+            "HN-N04-PCWS"
+          ],
+          "target": "HN-N04-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-PCWR",
+            "HN-N05-PCWS"
+          ],
+          "target": "HN-N05-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWR",
+            "HN-N02-PCWS"
+          ],
+          "target": "HN-N02-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-PCWR",
+            "HN-N06-PCWS"
+          ],
+          "target": "HN-N06-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-PCWR",
+            "HN-N07-PCWS"
+          ],
+          "target": "HN-N07-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "PCW_SPLIT_CORRIDOR",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-PCWR",
+            "HN-N08-PCWS"
+          ],
+          "target": "HN-N08-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 6,
+      "codes_on_target": {
+        "CLASH_HARD": 6,
+        "PCW_SPLIT_CORRIDOR": 6,
+        "ROUTE_DISCONNECTED": 6
+      },
+      "expected_codes": [
+        "PCW_SPLIT_CORRIDOR"
+      ],
+      "expected_fired": 6,
+      "explained_elsewhere": 0,
+      "injected": 6,
+      "not_applicable_targets": 46,
+      "unexplained_elsewhere": 0
+    },
+    "poc_over_rating": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "HEADER_OVER_CAPACITY",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 4,
+          "faulted": [
+            "HN-N08-PWR"
+          ],
+          "target": "HN-N08-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-N2"
+          ],
+          "target": "HN-N07-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "HEADER_OVER_CAPACITY",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 4,
+          "faulted": [
+            "HN-N04-PWR"
+          ],
+          "target": "HN-N04-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-AEX"
+          ],
+          "target": "HN-N07-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-N2"
+          ],
+          "target": "HN-N08-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "HEADER_OVER_CAPACITY",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 4,
+          "faulted": [
+            "HN-N03-PWR"
+          ],
+          "target": "HN-N03-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N05-GEX"
+          ],
+          "target": "HN-N05-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-PWR"
+          ],
+          "target": "HN-N06-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "CLASH_HARD": 6,
+        "HEADER_OVER_CAPACITY": 3,
+        "POC_OVER_RATING": 8,
+        "ROUTE_DISCONNECTED": 8
+      },
+      "expected_codes": [
+        "POC_OVER_RATING"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 12,
+      "injected": 8,
+      "not_applicable_targets": 29,
+      "unexplained_elsewhere": 0
+    },
+    "undersized_line": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-AEX"
+          ],
+          "target": "HN-N06-AEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N03-CDA"
+          ],
+          "target": "HN-N03-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N08-PCWR"
+          ],
+          "target": "HN-N08-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-PCWS"
+          ],
+          "target": "HN-N02-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N01-CDA"
+          ],
+          "target": "HN-N01-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-N2"
+          ],
+          "target": "HN-N02-N2",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_PRESSURE",
+            "UNDERSIZED_VELOCITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 1,
+          "faulted": [
+            "HN-N08-PCWS"
+          ],
+          "target": "HN-N08-PCWS",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "UNDERSIZED_RATING"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-PWR"
+          ],
+          "target": "HN-N07-PWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "UNDERSIZED_PRESSURE": 3,
+        "UNDERSIZED_RATING": 1,
+        "UNDERSIZED_VELOCITY": 7
+      },
+      "expected_codes": [
+        "MODEL_INVALID",
+        "UNDERSIZED_PRESSURE",
+        "UNDERSIZED_RATING",
+        "UNDERSIZED_VELOCITY"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 1,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    },
+    "wrong_utility": {
+      "cases": [
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-GEX"
+          ],
+          "target": "HN-N04-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-CDA"
+          ],
+          "target": "HN-N07-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N06-CDA"
+          ],
+          "target": "HN-N06-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "POC_OVER_RATING",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-SEX"
+          ],
+          "target": "HN-N02-SEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N07-GEX"
+          ],
+          "target": "HN-N07-GEX",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N02-UPW"
+          ],
+          "target": "HN-N02-UPW",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N01-CDA"
+          ],
+          "target": "HN-N01-CDA",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        },
+        {
+          "caught": true,
+          "codes_on_target": [
+            "CLASH_HARD",
+            "ROUTE_DISCONNECTED",
+            "WRONG_UTILITY"
+          ],
+          "expected_fired": true,
+          "explained_elsewhere": 0,
+          "faulted": [
+            "HN-N04-PCWR"
+          ],
+          "target": "HN-N04-PCWR",
+          "unexplained_codes": [],
+          "unexplained_elsewhere": 0
+        }
+      ],
+      "caught": 8,
+      "codes_on_target": {
+        "CLASH_HARD": 8,
+        "POC_OVER_RATING": 1,
+        "ROUTE_DISCONNECTED": 8,
+        "WRONG_UTILITY": 8
+      },
+      "expected_codes": [
+        "WRONG_UTILITY"
+      ],
+      "expected_fired": 8,
+      "explained_elsewhere": 0,
+      "injected": 8,
+      "not_applicable_targets": 0,
+      "unexplained_elsewhere": 0
+    }
+  }
+}

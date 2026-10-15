@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "columns": 40,
+    "demands": 140,
+    "equipment": 8,
+    "headers": 18,
+    "hookups": 88,
+    "pocs": 252,
+    "systems": 9,
+    "tools": 22
+  },
+  "db_equals_seed": true,
+  "ifc_equals_seed": true,
+  "ports_base": {
+    "hookups_checked": 88,
+    "mismatches": [],
+    "pocs_checked": 252,
+    "port_connections": 428,
+    "ports": 1072
+  }
+}

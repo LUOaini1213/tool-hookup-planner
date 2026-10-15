@@ -1,0 +1,80 @@
+{
+  "greedy": {
+    "est_hookup_cost": 131502.0,
+    "est_length_m": 573.6,
+    "new_pocs": 3,
+    "objective": 311502.0,
+    "pcw_tools_split_across_corridors": 0,
+    "unassigned": 0,
+    "unassigned_systems": [],
+    "upgrade_cost": 180000.0,
+    "upgrades": {
+      "AEX-D": 1,
+      "PCWS-C": 1
+    }
+  },
+  "hungarian_relaxed": {
+    "est_hookup_cost": 126498.0,
+    "est_length_m": 540.0,
+    "new_pocs": 3,
+    "objective": 126498.0,
+    "pcw_tools_split_across_corridors": 1,
+    "unassigned": 0,
+    "unassigned_systems": [],
+    "upgrade_cost": 0,
+    "upgrades": {}
+  },
+  "milp": {
+    "est_hookup_cost": 148338.0,
+    "est_length_m": 624.0,
+    "new_pocs": 3,
+    "objective": 243338.0,
+    "pcw_tools_split_across_corridors": 0,
+    "unassigned": 0,
+    "unassigned_systems": [],
+    "upgrade_cost": 95000.0,
+    "upgrades": {
+      "AEX-D": 1
+    }
+  },
+  "milp_existing_pocs_only": {
+    "est_hookup_cost": 129198.0,
+    "est_length_m": 601.2,
+    "new_pocs": 0,
+    "objective": 224198.0,
+    "pcw_tools_split_across_corridors": 0,
+    "unassigned": 3,
+    "unassigned_systems": [
+      "PWR"
+    ],
+    "upgrade_cost": 95000.0,
+    "upgrades": {
+      "AEX-D": 1
+    }
+  },
+  "milp_no_pairing": {
+    "est_hookup_cost": 138978.0,
+    "est_length_m": 588.0,
+    "new_pocs": 3,
+    "objective": 233978.0,
+    "pcw_tools_split_across_corridors": 3,
+    "unassigned": 0,
+    "unassigned_systems": [],
+    "upgrade_cost": 95000.0,
+    "upgrades": {
+      "AEX-D": 1
+    }
+  },
+  "milp_relaxed": {
+    "est_hookup_cost": 126498.0,
+    "est_length_m": 540.0,
+    "new_pocs": 3,
+    "objective": 126498.0,
+    "pcw_tools_split_across_corridors": 1,
+    "unassigned": 0,
+    "unassigned_systems": [],
+    "upgrade_cost": 0,
+    "upgrades": {}
+  },
+  "pcw_tools": 6
+}

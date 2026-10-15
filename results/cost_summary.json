@@ -1,0 +1,51 @@
+{
+  "by_category": {
+    "fittings": 9864.366,
+    "labour": 31771.8,
+    "material": 54294.1824,
+    "test": 20600,
+    "tie_in": 45200
+  },
+  "by_system": {
+    "AEX": 13236.4,
+    "CDA": 24796.932,
+    "GEX": 16490.4,
+    "N2": 27560.25,
+    "PCWR": 22058.8212,
+    "PCWS": 22936.5672,
+    "PWR": 9916.872,
+    "SEX": 19495.0,
+    "UPW": 5239.106
+  },
+  "currency": "CU",
+  "grand_total": 274730.3484,
+  "hookup_total": 161730.3484,
+  "labour_h": 529.53,
+  "pls_items": [
+    {
+      "cost": 95000.0,
+      "header": "AEX-D",
+      "item": "Header capacity step AEX-D x1",
+      "steps": 1
+    },
+    {
+      "cost": 6000,
+      "header": "PWR-B",
+      "item": "New POC PWR-B-N006",
+      "steps": 1
+    },
+    {
+      "cost": 6000,
+      "header": "PWR-B",
+      "item": "New POC PWR-B-N054",
+      "steps": 1
+    },
+    {
+      "cost": 6000,
+      "header": "PWR-D",
+      "item": "New POC PWR-D-N048",
+      "steps": 1
+    }
+  ],
+  "pls_total": 113000.0
+}

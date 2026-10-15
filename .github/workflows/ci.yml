@@ -1,0 +1,23 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Unit tests
+        run: python -m pytest -q
+      - name: Reproduce results and compare with the committed manifest
+        run: |
+          python scripts/run_all.py
+          git diff --exit-code results/MANIFEST.sha256
+      - name: README numbers trace to results
+        run: python scripts/verify_readme.py
+      - name: Mutation check
+        run: |
+          python tests/mutate.py --jobs 4
+          git diff --exit-code results/mutation_report.txt

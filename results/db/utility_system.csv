@@ -1,0 +1,10 @@
+code,name,kind,role,fluid,flow_unit,material,v_max,coincidence_factor
+AEX,Acid exhaust,exhaust,exhaust,air,m3/h,plastic,7.62,1.0
+CDA,Clean dry air,gas,supply,air,Sm3/h,ss_ep_tube,9.0,1.0
+GEX,General exhaust,exhaust,exhaust,air,m3/h,galvanized,7.62,1.0
+N2,Nitrogen,gas,supply,n2,Sm3/h,ss_ep_tube,9.0,1.0
+PCWR,Process cooling water return,liquid,return,water,L/min,stainless,2.5,1.0
+PCWS,Process cooling water supply,liquid,supply,water,L/min,stainless,2.5,1.0
+PWR,Process power,power,supply,,kVA,copper,0.0,1.0
+SEX,Solvent exhaust,exhaust,exhaust,air,m3/h,stainless,7.62,1.0
+UPW,Ultrapure water,liquid,supply,water,L/min,plastic,3.0,1.0

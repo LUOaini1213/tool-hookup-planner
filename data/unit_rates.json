@@ -1,0 +1,42 @@
+{
+  "_notice": "ILLUSTRATIVE UNIT RATES. Invented round numbers in a notional currency unit (CU) so the cost and schedule logic can be exercised. They are not quotes, benchmarks or market prices. Durations (including tool move-in/set and vendor start-up) are invented as well.",
+  "currency": "CU",
+  "labour_rate_per_h": 60,
+  "material_per_m": {
+    "_formula": "a + b * outer_diameter_mm (copper: a + per_amp * breaker rating in A)",
+    "stainless": {"a": 20, "b": 1.6},
+    "ss_ep_tube": {"a": 28, "b": 2.2},
+    "plastic": {"a": 15, "b": 1.1},
+    "galvanized": {"a": 25, "b": 0.35},
+    "copper": {"a": 6, "b": 0.0, "per_amp": 0.08}
+  },
+  "labour_h_per_m": {"liquid": 0.9, "gas": 1.1, "exhaust": 0.7, "power": 0.25},
+  "elbow_each": {"_formula": "a + b * outer_diameter_mm", "a": 15, "b": 0.6},
+  "poc_tie_in_each": {"liquid": 900, "gas": 1100, "exhaust": 700, "power": 650},
+  "test_each": {"liquid": 400, "gas": 550, "exhaust": 300, "power": 250},
+  "new_poc_each": 6000,
+  "header_upgrade": {
+    "_note": "one capacity step on a sub-fab header (process lateral work); step in the system flow unit",
+    "PCWS": {"step": 200, "cost": 85000, "days": 12},
+    "PCWR": {"step": 200, "cost": 70000, "days": 10},
+    "UPW": {"step": 150, "cost": 110000, "days": 15},
+    "CDA": {"step": 150, "cost": 45000, "days": 8},
+    "N2": {"step": 150, "cost": 50000, "days": 8},
+    "GEX": {"step": 1500, "cost": 60000, "days": 10},
+    "AEX": {"step": 1500, "cost": 95000, "days": 14},
+    "SEX": {"step": 1500, "cost": 90000, "days": 14},
+    "PWR": {"step": 250, "cost": 75000, "days": 9}
+  },
+  "assignment_cost_per_m": {"PCWS": 260, "PCWR": 260, "UPW": 230, "CDA": 210, "N2": 210,
+                            "GEX": 190, "AEX": 200, "SEX": 220, "PWR": 50},
+  "schedule": {
+    "hours_per_day": 8,
+    "hookup_setup_h": {"liquid": 6, "gas": 6, "exhaust": 4, "power": 3},
+    "test_days": {"liquid": 1.0, "gas": 1.0, "exhaust": 0.5, "power": 0.5},
+    "move_in_set_days": 1.5,
+    "utilities_on_days": 1.0,
+    "vendor_startup_days": 5.0,
+    "new_poc_days": 2.0,
+    "crews": {"pipe": 3, "duct": 1, "elec": 1, "test": 2, "pls": 1, "rigging": 1}
+  }
+}

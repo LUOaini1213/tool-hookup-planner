@@ -1,0 +1,48 @@
+{
+  "astar_clashes": 0,
+  "cost_grand_total": 274730.3484,
+  "cost_hookups": 161730.3484,
+  "cost_pls": 113000.0,
+  "currency": "CU",
+  "greedy_objective": 311502.0,
+  "greedy_upgrades": {
+    "AEX-D": 1,
+    "PCWS-C": 1
+  },
+  "hookups_routed": 52,
+  "ifc_port_connections_planned": 535,
+  "ifc_port_mismatches": 0,
+  "ifc_ports_planned": 1185,
+  "last_utilities_on_day": 32.0,
+  "makespan_days": 37.0,
+  "milp_equals_hungarian_relaxed": true,
+  "milp_new_pocs": 3,
+  "milp_objective": 243338.0,
+  "milp_saving_vs_greedy_range": [
+    0.2188236352,
+    0.4214656748
+  ],
+  "milp_saving_vs_greedy_reserve0": 0.2188236352,
+  "milp_saving_vs_greedy_reserve10": 0.3416969468,
+  "milp_upgrades": {
+    "AEX-D": 1
+  },
+  "naive_clashes": 402,
+  "notice": "ILLUSTRATIVE SYNTHETIC DATA - invented sub-fab, utilities and tools; not any real facility, company or equipment.",
+  "pressure_governed_sizes": 4,
+  "requirements": 52,
+  "review_clean_issues": 0,
+  "review_open_caught": 24,
+  "review_open_injected": 32,
+  "review_rule_expected_fired": 56,
+  "review_rule_injected": 56,
+  "review_rule_unexplained_elsewhere": 0,
+  "roundtrip_ok": true,
+  "routed_length_m": 628.8,
+  "routed_over_lower_bound": 1.013539652,
+  "systems_short": [
+    "AEX"
+  ],
+  "tools_existing": 14,
+  "tools_new": 8
+}

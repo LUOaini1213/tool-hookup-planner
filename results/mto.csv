@@ -1,0 +1,25 @@
+category,system,material,size,length_m,elbows,hookups
+cable,PWR,copper,63 A,7.8,0,1
+cable,PWR,copper,160 A,10.2,0,1
+cable,PWR,copper,200 A,42.0,0,4
+cable,PWR,copper,250 A,15.0,0,2
+duct,GEX,galvanized,D150,6.6,3,1
+duct,GEX,galvanized,D200,44.4,16,4
+duct,GEX,galvanized,D250,4.2,3,1
+duct,AEX,plastic,D200,18.6,7,3
+duct,AEX,plastic,D300,6.6,3,1
+duct,SEX,stainless,D150,15.6,6,1
+duct,SEX,stainless,D200,23.4,9,3
+pipe,PCWS,stainless,NPS 1/2,18.6,5,1
+pipe,PCWS,stainless,NPS 3/4,37.2,8,2
+pipe,PCWS,stainless,NPS 1,29.4,6,2
+pipe,PCWS,stainless,NPS 1 1/4,29.4,7,1
+pipe,PCWR,stainless,NPS 1/2,19.8,5,1
+pipe,PCWR,stainless,NPS 3/4,69.0,15,4
+pipe,PCWR,stainless,NPS 1,25.8,5,1
+pipe,UPW,plastic,NPS 3/4,24.0,9,2
+pipe,CDA,ss_ep_tube,OD 1/2 in,38.4,13,3
+pipe,CDA,ss_ep_tube,OD 3/4 in,45.6,16,5
+pipe,N2,ss_ep_tube,OD 1/2 in,16.2,6,2
+pipe,N2,ss_ep_tube,OD 3/4 in,44.4,15,4
+pipe,N2,ss_ep_tube,OD 1 in,36.6,11,2
