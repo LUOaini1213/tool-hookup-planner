@@ -8,7 +8,14 @@ from pathlib import Path
 
 from . import db as DB
 from . import ifc_io, review, scenario
-from .capacity import capacity_check
+from .capacity import capacity_check, validate_reserve
+
+
+def _reserve_arg(value: str) -> float:
+    try:
+        return validate_reserve(float(value))
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(str(exc)) from exc
 
 
 def _table(rows: list[dict]) -> str:
@@ -97,13 +104,13 @@ def main(argv=None) -> int:
     q.set_defaults(fn=cmd_query)
     c = sub.add_parser("capacity", help="header capacity check for the new tools")
     c.add_argument("--db", default="build/utilities.db")
-    c.add_argument("--reserve", type=float, default=0.0)
+    c.add_argument("--reserve", type=_reserve_arg, default=0.0)
     c.add_argument("--tools", help="comma-separated tool ids (default: all new tools)")
     c.set_defaults(fn=cmd_capacity)
     r = sub.add_parser("review", help="review a hookup proposal JSON against the database")
     r.add_argument("proposal")
     r.add_argument("--db", default="build/utilities.db")
-    r.add_argument("--reserve", type=float, default=0.0)
+    r.add_argument("--reserve", type=_reserve_arg, default=0.0)
     r.set_defaults(fn=cmd_review)
     a = sub.add_parser("run", help="reproduce results/ end to end")
     a.add_argument("--out", default="results")

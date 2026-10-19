@@ -1,4 +1,4 @@
-Mutation check (tests/mutate.py) against 98 unit tests
+Mutation check (tests/mutate.py) against 129 unit tests
 
 killed   M01 hydraulics.py: if re < E.RE_LAMINAR_MAX:
 killed   M02 hydraulics.py: return 64.0 / re
