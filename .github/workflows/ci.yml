@@ -25,7 +25,8 @@ jobs:
       - name: Regenerated results leave the working tree clean
         run: |
           git status --porcelain
-          test -z "$(git status --porcelain -- results)"
+          # the PNG's bytes differ between Linux and Windows builds; its pixels are pinned by the manifest
+          test -z "$(git status --porcelain -- results ':!results/*.png')"
       - name: README numbers trace to results
         run: python scripts/verify_readme.py
       - name: README CLI commands run from the installed console script
