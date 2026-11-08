@@ -48,6 +48,8 @@ How each step works, and what it simplifies, is in [docs/method.md](docs/method.
 
 ## Reproduce
 
+Python 3.11 (CI uses 3.11 on ubuntu-latest and windows-latest; `pyproject.toml` requires >= 3.11).
+
 ```bash
 python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt

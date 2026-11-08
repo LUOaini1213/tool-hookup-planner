@@ -31,9 +31,11 @@ jobs:
       - name: README CLI commands run from the installed console script
         run: |
           pip install -e . --no-deps
-          hookup-planner build-db
+          # build/utilities.db comes from run_all.py above (review needs the planned POCs)
+          hookup-planner query headers --system AEX
           hookup-planner capacity --reserve 0.1
           hookup-planner review results/proposal.json
+          hookup-planner build-db --ifc build/fresh.ifc --db build/fresh.db
           set +e
           hookup-planner review results/proposal.json --reserve nan
           rc=$?
