@@ -1,4 +1,4 @@
-Mutation check (tests/mutate.py) against 98 unit tests
+Mutation check (tests/mutate.py) against 129 unit tests
 
 killed   M01 hydraulics.py: if re < E.RE_LAMINAR_MAX:
 killed   M02 hydraulics.py: return 64.0 / re
@@ -93,9 +93,13 @@ killed   M90 ifc_io.py: VIEW_DEFINITION = "ViewDefinition [ReferenceView_V1.2]"
 killed   M91 planner.py: return b.kind == "header" and a.eid.endswith("#0") and poc_header.get(
 killed   M92 planner.py: lat.reserved[n] = True
 killed   M93 numfmt.py: v = float(f"{x:.10g}")
+killed   M94 review.py: validate_reserve(reserve)
+killed   M95 capacity.py: not 0.0 <= reserve < 1.0
+killed   M96 capacity.py: isinstance(reserve, bool) or
+killed   M97 cli.py: r.add_argument("--reserve", type=_reserve_arg
 
 Equivalent mutants:
   geometry.py: if h >= n_exist and h - n_exist <= idx: -> if h >= n_exist and h - n_exist < idx:
     -> the only extra pair it admits is a run tested against itself, which the same-owner rule skips
 
-92/93 mutants killed (1 documented equivalent, 0 escaped)
+96/97 mutants killed (1 documented equivalent, 0 escaped)

@@ -15,6 +15,17 @@ review aid checks hookup proposals for common classes of drawing errors.
 > in [docs/sources.md](docs/sources.md); everything not listed there is an
 > illustrative modelling choice.
 
+**Key results** (synthetic data; every number here is checked by `scripts/verify_readme.py`):
+
+* 52 hookups for 8 new tools routed in 3-D with **0 clashes** (628.8 m in total); the same
+  assignments drawn as straight L-routes give 402 clashes.
+* MILP POC assignment: 243,338 CU against 311,502 CU for a greedy rule at 0 % reserve, a
+  saving of 21.9 % to 42.1 % over 5 planning reserves, almost all of it avoided header
+  capacity steps whose costs are invented.
+* CI regenerates all of `results/` and compares the 34-file SHA-256 manifest.
+* Main limits: all data are synthetic, hydraulics are incompressible at one temperature,
+  and the review aid shares the planner's code and catches 0 of 8 oversized-line faults.
+
 Terms used below: the sub-fab *headers* (mains) run along the corridors; *process lateral*
 (PLS) work extends them to points of connection (here: header capacity steps and new
 POCs); a *hookup* runs from a POC to the tool's connection point; after the hookups are
@@ -37,6 +48,8 @@ How each step works, and what it simplifies, is in [docs/method.md](docs/method.
 
 ## Reproduce
 
+Python 3.11 (CI uses 3.11 on ubuntu-latest and windows-latest; `pyproject.toml` requires >= 3.11).
+
 ```bash
 python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -49,18 +62,25 @@ python tests/mutate.py --jobs 4                   # mutation check (the report d
 The command-line interface works on the database:
 
 ```bash
-PYTHONPATH=src python -m hookup_planner build-db                  # synthetic model -> IFC -> SQLite
-PYTHONPATH=src python -m hookup_planner query headers --system AEX
-PYTHONPATH=src python -m hookup_planner capacity --reserve 0.1
-PYTHONPATH=src python -m hookup_planner run                       # same as scripts/run_all.py
-PYTHONPATH=src python -m hookup_planner review results/proposal.json   # after `run`
+pip install -e . --no-deps                  # once, after requirements.txt; adds the hookup-planner command
+hookup-planner build-db                     # synthetic model -> IFC -> SQLite
+hookup-planner query headers --system AEX
+hookup-planner capacity --reserve 0.1       # reserve must be a fraction in [0, 1)
+hookup-planner run                          # same as scripts/run_all.py
+hookup-planner review results/proposal.json # after `run`; exit 1 if it finds issues
 ```
+
+Without the install step, `PYTHONPATH=src python -m hookup_planner ...` runs the same
+commands (on Windows PowerShell: `$env:PYTHONPATH="src"` first). An invalid `--reserve`
+(negative, NaN, 1 or more) is rejected with exit code 2.
 
 Results are deterministic: floats are rounded to 10 significant digits, IFC GlobalIds and
 timestamps are fixed, the MILP optimum is made unique. `results/MANIFEST.sha256` (34
 files; the PNG is hashed by its decoded pixels) was identical on Windows 11 and on
 Ubuntu 24.04 under WSL with the pinned versions in `requirements.txt`, and CI regenerates
-the results on ubuntu-latest and compares the manifest.
+the results on ubuntu-latest and windows-latest and compares the manifest.
+`.gitattributes` keeps text files LF on checkout, so a regeneration on Windows leaves
+`git status` clean.
 
 ## Results (synthetic demo)
 
@@ -97,6 +117,12 @@ all 52.
 |---|---|---|---|
 | MILP | 148,338 CU | AEX-D ×1 | **243,338 CU** |
 | Greedy (cheapest free POC, step when short) | 131,502 CU | AEX-D ×1, PCWS-C ×1 | 311,502 CU |
+
+The hookup cost in this table is the assignment's ranking proxy: a per-metre rate per
+system on the estimated length plus a fixed charge for each new POC (`assign.py`). The
+itemised estimate under *Cost and schedule* prices material, fittings, labour, testing and
+tie-ins on the routed lengths and counts the new POCs as process lateral work, which is
+why its total (274,730 CU) differs from the MILP total here.
 
 How much the MILP saves against the greedy rule depends on the planning reserve:
 21.9 % at 0 %, 34.2 % at 10 %, and between 21.9 % and 42.1 % over the 5 reserves in
@@ -169,12 +195,12 @@ The review aid has no check that a line is larger than its POC or than needed, s
 unit error that oversizes the line goes through unnoticed. Only 2 of the 16 gas hookups
 can be pushed past the 10 % limit by drawing a smaller catalogue tube, hence 2 cases.
 
-**Tests.** The suite has 98 tests. `tests/mutate.py` applies 93 deliberate bugs to a
-copy of the code: 92/93 killed, 1 documented equivalent, 0 escaped (see
+**Tests.** The suite has 129 tests. `tests/mutate.py` applies 97 deliberate bugs to a
+copy of the code: 96/97 killed, 1 documented equivalent, 0 escaped (see
 `results/mutation_report.txt`; the equivalent mutant only admits a pair that another rule
 already skips, as explained there and in the script). The mutants cover the buoyancy
 term, fitting losses, the PCW pairing rows and loop check, the breaker rule, the new
-review rules and fault generators, the schedule steps and the IFC ports. In the first run
+review rules and fault generators, the shared reserve validation of the capacity check, review aid and CLI, the schedule steps and the IFC ports. In the first run
 of this set one mutant escaped (dropping the rule that a candidate POC must be rated for
 the demand, which the enlarged test site no longer exercised); the test that now kills it
 was added afterwards.

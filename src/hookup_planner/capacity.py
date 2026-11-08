@@ -11,6 +11,7 @@ header the steps are actually needed.
 from __future__ import annotations
 
 import math
+from numbers import Real
 
 from . import engineering as E
 from .model import Index, header_loads
@@ -23,9 +24,15 @@ def new_demand(site: dict, tools: list[str] | None = None) -> list[dict]:
     return sorted(out, key=lambda d: (d["tool"], E.SYSTEM_ORDER.index(d["system"])))
 
 
+def validate_reserve(reserve: float) -> float:
+    """Check the planning fraction before it can hide a capacity shortfall."""
+    if isinstance(reserve, bool) or not isinstance(reserve, Real) or not 0.0 <= reserve < 1.0:
+        raise ValueError("reserve must be a finite number in [0, 1)")
+    return reserve
+
+
 def capacity_check(site: dict, tools: list[str] | None = None, reserve: float = 0.0) -> dict:
-    if not 0.0 <= reserve < 1.0:
-        raise ValueError("reserve must be in [0, 1)")
+    validate_reserve(reserve)
     loads = header_loads(site)
     reqs = new_demand(site, tools)
     headers = []
