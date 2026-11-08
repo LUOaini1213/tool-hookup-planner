@@ -2,7 +2,14 @@ name: ci
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -15,9 +22,25 @@ jobs:
         run: |
           python scripts/run_all.py
           git diff --exit-code results/MANIFEST.sha256
+      - name: Regenerated results leave the working tree clean
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain -- results)"
       - name: README numbers trace to results
         run: python scripts/verify_readme.py
+      - name: README CLI commands run from the installed console script
+        run: |
+          pip install -e . --no-deps
+          hookup-planner build-db
+          hookup-planner capacity --reserve 0.1
+          hookup-planner review results/proposal.json
+          set +e
+          hookup-planner review results/proposal.json --reserve nan
+          rc=$?
+          set -e
+          test "$rc" -eq 2
       - name: Mutation check
+        if: matrix.os == 'ubuntu-latest'
         run: |
           python tests/mutate.py --jobs 4
           git diff --exit-code results/mutation_report.txt

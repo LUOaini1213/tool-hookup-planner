@@ -1,0 +1,6 @@
+# Text files are stored and checked out with LF so that regenerating results/ on
+# Windows (core.autocrlf=true) leaves git status clean and the manifest comparable.
+* text=auto eol=lf
+*.png binary
+*.db binary
+*.sqlite binary

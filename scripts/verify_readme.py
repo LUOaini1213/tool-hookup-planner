@@ -101,6 +101,19 @@ def main() -> int:
         f"{m_kill.group(1)}/{m_kill.group(2)} killed, {m_kill.group(3)} documented equivalent, "
         f"{m_kill.group(4)} escaped",
     ]
+    # first-screen "Key results" block and the cost reconciliation note
+    ol = of["unit_lpm_read_as_m3h"]
+    expected += [
+        f"* {r['hookups']} hookups for {s['tools_new']} new tools routed in 3-D with **{r['astar_clashes']} clashes** "
+        f"({r['routed_length_m']:.1f} m in total); the same\n  assignments drawn as straight L-routes give "
+        f"{r['naive_clashes']} clashes.",
+        f"* MILP POC assignment: {money(ms['objective'])} against {money(gr['objective'])} for a greedy rule at 0 % "
+        f"reserve, a\n  saving of {pct(s['milp_saving_vs_greedy_range'][0])} to "
+        f"{pct(s['milp_saving_vs_greedy_range'][1])} over {len(sens)} planning reserves",
+        f"compares the {len((RES / 'MANIFEST.sha256').read_text().splitlines())}-file SHA-256 manifest.",
+        f"catches {ol['caught']} of {ol['injected']} oversized-line faults.",
+        f"why its total ({money(c['grand_total'])}) differs from the MILP total here.",
+    ]
     for res_row, label in zip(sens, ("0 %", "2 %", "5 %", "10 %", "20 %")):
         expected.append(f"| {label} | {res_row['systems_short']} | {res_row['milp_upgrade_steps']} | "
                         f"{money(res_row['milp_upgrade_cost'])} |")
