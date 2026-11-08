@@ -13,6 +13,7 @@ import random
 
 from . import engineering as E
 from . import hydraulics as H
+from .capacity import validate_reserve
 from .geometry import EPS, find_clashes
 from .lattice import bends, compress, length
 from .model import Index, dz_flow, evaluate_hookup, header_loads, hookup_solids, static_solids, tool_side_pressure
@@ -30,6 +31,7 @@ def _close(p, q) -> bool:
 
 
 def review(site: dict, proposal: list[dict], upgrades: dict | None = None, reserve: float = 0.0) -> list[dict]:
+    validate_reserve(reserve)
     # planned hookups in the model are the proposal itself, not existing work
     site = dict(site, hookups=[h for h in site["hookups"] if h["status"] != "planned"])
     idx = Index(site)

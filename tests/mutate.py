@@ -149,6 +149,11 @@ MUTANTS = [
      'return b.kind == "header" and poc_header.get(a.meta.get("poc")) == b.eid'),
     (P + "planner.py", "            lat.reserved[n] = True", "            pass"),
     (P + "numfmt.py", 'v = float(f"{x:.10g}")', 'v = float(f"{x:.12g}")'),
+    # reserve validation shared by capacity, review and the CLI
+    (P + "review.py", "    validate_reserve(reserve)\n", ""),
+    (P + "capacity.py", "not 0.0 <= reserve < 1.0", "not reserve < 1.0"),
+    (P + "capacity.py", "isinstance(reserve, bool) or ", ""),
+    (P + "cli.py", 'r.add_argument("--reserve", type=_reserve_arg', 'r.add_argument("--reserve", type=float'),
 ]
 
 # Mutants found to be equivalent (no observable behaviour change on any input the code can
